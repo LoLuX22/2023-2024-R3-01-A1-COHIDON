@@ -1,6 +1,6 @@
 <?php 
-    require_once 'controller/MainController.php'
+    require_once 'controllers/MainController.php';
 
     $controller = new MainController();
-    $controller->index();
+    $controller->Index();
 ?>
