@@ -26,22 +26,16 @@ abstract class Model {
         //retourne le résultat
         return $res;
     }
+    
+    // Fonction permettant de se connecter à la base de données
+    private function getDb() : PDO 
     {
-        //Si pas de paramètres
-        $res = false;
-
-        //Sans paramètres
-        if ($params === null) 
+        // Création de la connexion à la BD
+        if ($this->db === null)  // Premier appel de la méthode : on crée la connexion
+        try
         {
-            $res = $this->getDB()->query($sql); // exécution directe
+            $this->db = new PDO('mysql:host=localhost;dbname=pokemon;charset=utf8', 'root', ''); // Création de la connexion
         }
-        //Avec paramètres
-        else 
-        {
-            $res = $this->getDB()->prepare($sql); // requête préparée
-            $res->execute($params); // exécution de la requête préparée
-        }
-        //retourne le résultat
-        return $res;
+        return $this->db; // Renvoi de la connexion
     }
 }
