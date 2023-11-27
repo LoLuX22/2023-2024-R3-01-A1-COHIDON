@@ -1,6 +1,10 @@
 <?php
 
-// Classe abstraite Model
+/**
+ * Classe abstraite Model
+ * Centralise les services d'accès à une base de données.
+ * Utilise l'API PDO de PHP
+ */
 abstract class Model {
 
     // Objet PDO d'accès à la BD
