@@ -24,7 +24,22 @@
             return $pokemons; // Retourne le tableau
         }
 
-       
+        public function getById(int $idPokemon):?Pokemon
+        {
+            $pokemon = null;
+            $sql = 'SELECT * FROM pokemon WHERE idPokemon = :idPokemon';
+            $res = $this->execRequest($sql,array($idPokemon))->fetch();
+            if ($result != null)
+            {
+                $pokemon = new Pokemon;
+                $pokemon->hydrate($result);
+            }
+
+            return $pokemon;
+        }
+        
+        
+        
     }    
           
 ?>
