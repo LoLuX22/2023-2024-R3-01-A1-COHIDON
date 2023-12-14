@@ -7,11 +7,11 @@
             "label": "Start Opera GX + Fichier Courrant",
            "type": "shell",
 
-            "command":"start",//"C:/Users/ttmdu/OneDrive/Bureau/Navigateur/Navigateur Opera GX.lnk"
+            "command":"start",//"C:\xampp\htdocs\2023-2024-R3-01-A1-COHIDON\2023-2024-R3-01-A1-COHIDON\index.php",
 
            "args": [
                 "msedge",
-                "http://localhost/2023-2024-R3-01-A1-COHIDON/index.php"
+                "http://localhost/2023-2024-R3-01-A1-COHIDON/2023-2024-R3-01-A1-COHIDON/index.php"
             
             ],
             

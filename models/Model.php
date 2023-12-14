@@ -39,6 +39,8 @@ abstract class Model {
         try
         {
             $this->db = new PDO('mysql:host=localhost;dbname=pokemon;charset=utf8', 'root', ''); // Création de la connexion
+        } catch (PDOException $e) {
+            die('Erreur : ' . $e->getMessage());
         }
         return $this->db; // Renvoi de la connexion
     }

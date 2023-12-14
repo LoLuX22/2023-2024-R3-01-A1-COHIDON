@@ -17,25 +17,32 @@
             $sql = 'SELECT * FROM pokemon'; // Requête SQL
             $pokemons = array(); 
             $res = $this->execRequest($sql); // exécution de la requête SQL
-            while ($donnees = $res->fetch(PDO::FETCH_ASSOC)) // Récupération des résultats ligne par ligne
-            {
-                $pokemons[] = new Pokemon($donnees); // Création d'un objet Pokemon et ajout dans un tableau
-            }
-            return $pokemons; // Retourne le tableau
+            $donnees = $res->fetchAll(PDO::FETCH_ASSOC);
+            return $donnees; // Retourne le tableau
         }
 
         public function getById(int $idPokemon):?Pokemon
         {
-            $pokemon = null;
-            $sql = 'SELECT * FROM pokemon WHERE idPokemon = :idPokemon';
-            $res = $this->execRequest($sql,array($idPokemon))->fetch();
-            if ($result != null)
+            try
             {
-                $pokemon = new Pokemon;
-                $pokemon->hydrate($result);
+                $sql = "SELECT * FROM pokemon WHERE idPokemon = ?";
+                $res = $this->execRequest($sql,array($idPokemon));
+                $pokemon = $res->fetch(PDO::FETCH_ASSOC);
+                $res -> closeCursor();
+                if ($res != null)
+                {
+                    $pokemon = new Pokemon($pokemon['idPokemon'],$pokemon['nomEspece'],$pokemon['description'],$pokemon['typeOne'],$pokemon['typeTwo'],$pokemon['urlImg']);
+                }
+                else
+                {
+                    $pokemon = null;
+                }
+                return $pokemon;
             }
-
-            return $pokemon;
+            catch (PDOException $e)
+            {
+                die('Erreur : ' . $e->getMessage());
+            }
         } 
     }            
 ?>
