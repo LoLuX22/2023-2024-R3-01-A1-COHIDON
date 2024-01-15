@@ -11,16 +11,17 @@ require_once "models/PokemonManager.php";
 
             // Création d'un objet PokemonManager
             $pokemonManager = new PokemonManager();
-            $listManager = $pokemonManager->getAll();
+            $listPokemon = $pokemonManager->getAll();
             // Récupération de tous les pokemons
             $first = $pokemonManager->getById(1);
-            $other = $pokemonManager->getById(8);
+            $other = $pokemonManager->getById(999);
             // Génération de la vue Index
             $indexView->generer([
                 'nomDresseur' => "Red",
-                'listManager' => $listManager,
+                'listPokemon' => $listPokemon,
                 'first' => $first,
-                'other' => $other]);
+                'other' => $other
+            ]);
         }
 }
 ?>

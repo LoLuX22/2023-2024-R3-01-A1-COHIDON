@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="public/css/main2.css">
+
 <h1>Pokédex de <?= $nomDresseur ?></h1>
 
 <table>
@@ -11,9 +13,8 @@
             <th>Options</th>
         </tr>
     </thead>
-    <body>
-    <?php if (isset($listPokemon)) : ?>
-    <?php foreach ($listManager as $pokemon) : ?>
+    <tbody>
+    <?php foreach ($listPokemon as $pokemon) : ?>
         <tr>
                 <td><?= $pokemon->getIdPokemon() ?></td>
                 <td><?= $pokemon->getNomEspece() ?></td>
@@ -21,10 +22,11 @@
                 <td><?= $pokemon->getTypeOne() . " " . $pokemon->getTypeTwo()  ?></td>
                 <td><img src="<?= $pokemon->getUrlImg() ?>" alt="<?= $pokemon->getNomEspece() ?>"></td>
                 <td>
-                    <a href="modifier-pokemon?idPokemon=<?= $pokemon->getIdPokemon() ?>"><img src="public/css/image/Pen.png" alt="Modifier"></a>
-                    <a href="supprimer-pokemon?idPokemon=<?= $pokemon->getIdPokemon() ?>"><img src="public/css/image/Bin.png" alt="Supprimer"></a>
+                    <a href="modifier-pokemon?idPokemon=<?= $pokemon->getIdPokemon() ?>"><img src="Images/Pen.png" alt="Modifier"></a>
+                    <a href="supprimer-pokemon?idPokemon=<?= $pokemon->getIdPokemon() ?>"><img src="Images/Bin.png" alt="Supprimer"></a>
                 </td>
             </tr>
     <?php endforeach; ?>
-<?php endif; ?>
-      
+
+    </body>
+</table>

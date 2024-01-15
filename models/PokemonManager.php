@@ -12,13 +12,26 @@
          * Renvoie la liste des pokemons
          * @return array la liste des pokemons
          */
-        public function getAll(): array 
+        public function getAll(): array
         {
             $sql = 'SELECT * FROM pokemon'; // Requête SQL
             $pokemons = array(); 
             $res = $this->execRequest($sql); // exécution de la requête SQL
             $donnees = $res->fetchAll(PDO::FETCH_ASSOC);
-            return $donnees; // Retourne le tableau
+
+            foreach ($donnees as $ligne) {
+                $pokemon = new Pokemon(
+                    $ligne['idPokemon'],
+                    $ligne['nomEspece'],
+                    $ligne['description'],
+                    $ligne['typeOne'],
+                    $ligne['typeTwo'],
+                    $ligne['urlImg']
+                );
+                $pokemons[] = $pokemon;
+            }
+
+            return $pokemons; // Retourne le tableau de pokemons
         }
 
         public function getById(int $idPokemon):?Pokemon

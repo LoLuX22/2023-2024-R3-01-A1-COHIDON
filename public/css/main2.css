@@ -1,0 +1,120 @@
+/* Reset des styles par défaut du navigateur */
+body, h1, table {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Couleur de fond de la page */
+}
+
+h1 {
+  text-align: center;
+  color: #333; /* Couleur du texte */
+  padding: 20px 0; /* Espacement autour du titre */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: #ddd; /* Couleur de fond de l'en-tête du tableau */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc; /* Bordure entre les lignes du tableau */
+}
+
+td img {
+  max-width: 100px; /* Limite la largeur de l'image dans les cellules du tableau */
+  height: auto;
+  display: block; /* Supprime l'espace supplémentaire sous l'image */
+  margin: 0 auto; /* Centre l'image horizontalement */
+}
+
+td a {
+  margin-right: 10px; /* Espacement entre les icô/* Reset des styles par défaut du navigateur */
+  body, h1, table {
+      margin: 0;
+      padding: 0;
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0; /* Couleur de fond de la page */
+  }
+  
+  h1 {
+      text-align: center;
+      color: #333; /* Couleur du texte */
+      padding: 20px 0; /* Espacement autour du titre */
+  }
+  
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+  }
+  
+  thead {
+      background-color: #ddd; /* Couleur de fond de l'en-tête du tableau */
+  }
+  
+  th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ccc; /* Bordure entre les lignes du tableau */
+  }
+  
+  td img {
+      max-width: 100px; /* Limite la largeur de l'image dans les cellules du tableau */
+      height: auto;
+      display: block; /* Supprime l'espace supplémentaire sous l'image */
+      margin: 0 auto; /* Centre l'image horizontalement */
+  }
+  
+  td a {
+      margin-right: 10px; /* Espacement entre les icônes Modifier et Supprimer */
+  }
+  
+  /* Styles pour les icônes Modifier et Supprimer */
+  td a img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+  }
+  
+  /* Effet de survol sur les liens */
+  td a:hover {
+      text-decoration: underline;
+  }
+  
+  /* Style de la première lettre en majuscule dans la description */
+  td:nth-child(3) {
+      text-transform: capitalize;
+  }
+
+}
+
+/* Styles pour les icônes Modifier et Supprimer */
+td a img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Effet de survol sur les liens */
+td a:hover {
+  text-decoration: underline;
+}
+
+/* Style de la première lettre en majuscule dans la description */
+td:nth-child(3) {
+  text-transform: capitalize;
+}
