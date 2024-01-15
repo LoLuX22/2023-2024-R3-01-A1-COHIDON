@@ -26,18 +26,27 @@
             try
             {
                 $sql = "SELECT * FROM pokemon WHERE idPokemon = ?";
-                $res = $this->execRequest($sql,array($idPokemon));
-                $pokemon = $res->fetch(PDO::FETCH_ASSOC);
-                $res -> closeCursor();
-                if ($res != null)
+                $res = $this->execRequest($sql,[$idPokemon]);
+                $lines = $res->fetch(PDO::FETCH_ASSOC);
+                if ($lines != null)
                 {
-                    $pokemon = new Pokemon($pokemon['idPokemon'],$pokemon['nomEspece'],$pokemon['description'],$pokemon['typeOne'],$pokemon['typeTwo'],$pokemon['urlImg']);
+                    $pokemon = new Pokemon(
+                        $lines['idPokemon'],
+                        $lines['nomEspece'],
+                        $lines['description'],
+                        $lines['typeOne'],
+                        $lines['typeTwo'],
+                        $lines['urlImg']
+                    );
+                    
                 }
+                
                 else
                 {
                     $pokemon = null;
                 }
                 return $pokemon;
+                
             }
             catch (PDOException $e)
             {
