@@ -12,7 +12,10 @@
 <header>
     <!-- Menu -->
     <nav>
-
+    <button href="index.php"><a href="index.php">Pokémons</a></button>
+        <button><a href="index.php?action=add-pokemon">Ajouter un Pokémon</a></button>
+        <button><a href="index.php?action=add-type">Ajouter un type de Pokémon</a></button>
+        <button><a href="index.php?action=search">Rechercher un Pokémon</a></button>
     </nav>
 </header>
 <!-- #contenu -->
