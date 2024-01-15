@@ -16,7 +16,11 @@ require_once "models/PokemonManager.php";
             $first = $pokemonManager->getById(1);
             $other = $pokemonManager->getById(8);
             // Génération de la vue Index
-            $indexView->generer(['nomDresseur' => "Red"]);
+            $indexView->generer([
+                'nomDresseur' => "Red",
+                'listPokemon' => $listPokemon,
+                'first' => $first,
+                'other' => $other]);
         }
 }
 ?>
