@@ -22,8 +22,8 @@
                 <td><?= $pokemon->getTypeOne() . " " . $pokemon->getTypeTwo()  ?></td>
                 <td><img src="<?= $pokemon->getUrlImg() ?>" alt="<?= $pokemon->getNomEspece() ?>"></td>
                 <td>
-                    <a href="modifier-pokemon?idPokemon=<?= $pokemon->getIdPokemon() ?>"><img src="Images/Pen.png" alt="Modifier"></a>
-                    <a href="supprimer-pokemon?idPokemon=<?= $pokemon->getIdPokemon() ?>"><img src="Images/Bin.png" alt="Supprimer"></a>
+                    <a href="edit-pokemon?idPokemon=<?= $pokemon->getIdPokemon() ?>"><img src="Images/Pen.png" alt="edit"></a>
+                    <a href="del-pokemon?idPokemon=<?= $pokemon->getIdPokemon() ?>"><img src="Images/Bin.png" alt="delete"></a>
                 </td>
             </tr>
     <?php endforeach; ?>
