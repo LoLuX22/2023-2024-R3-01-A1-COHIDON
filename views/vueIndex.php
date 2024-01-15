@@ -13,7 +13,7 @@
     </thead>
     <body>
     <?php if (isset($listPokemon)) : ?>
-    <?php foreach ($listPokemon as $pokemon) : ?>
+    <?php foreach ($listManager as $pokemon) : ?>
         <tr>
                 <td><?= $pokemon->getIdPokemon() ?></td>
                 <td><?= $pokemon->getNomEspece() ?></td>

@@ -18,7 +18,7 @@ require_once "models/PokemonManager.php";
             // Génération de la vue Index
             $indexView->generer([
                 'nomDresseur' => "Red",
-                'listPokemon' => $listPokemon,
+                'listManager' => $listManager,
                 'first' => $first,
                 'other' => $other]);
         }
