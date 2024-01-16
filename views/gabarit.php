@@ -13,9 +13,9 @@
     <!-- Menu -->
     <nav>
     <button href="index.php"><a href="index.php">Pokémons</a></button>
-        <button><a href="index.php?action=add-pokemon">Ajouter un Pokémon</a></button>
-        <button><a href="index.php?action=add-type-pokemon">Ajouter un type de Pokémon</a></button>
-        <button><a href="index.php?action=search">Rechercher un Pokémon</a></button>
+        <button><a href="index.php?action=AddPokemon">Ajouter un Pokémon</a></button>
+        <button><a href="index.php?action=AddType">Ajouter un type de Pokémon</a></button>
+        <button><a href="index.php?action=Search">Rechercher un Pokémon</a></button>
     </nav>
 </header>
 <!-- #contenu -->

@@ -2,17 +2,17 @@
 require_once("controllers/MainController.php");
 require_once("controllers/Router/Route.php");
 
-class RouteIndex extends Route
+class RouteAddPokemon extends Route
 {
 
-    private MainController $controller;
+    private PokemonController $controller;
 
     /**
-     * @param MainController $controller
-     * Constructeur de la classe RouteIndex
+     * @param PokemonController $controller
+     * Constructeur de la classe RouteAddPokemon
      */
 
-    public function __construct(MainController $controller)
+    public function __construct(PokemonController $controller)
     {
         parent::__construct();
         $this->controller = $controller;
@@ -20,11 +20,12 @@ class RouteIndex extends Route
 
     public function get(array $params = [])
     {
-        $this->controller->index();
+        
     }
 
     public function post(array $params = [])
     {
-        $this->controller->index();
+        $this->controller->displayAddPokemon();
     }
+
 }

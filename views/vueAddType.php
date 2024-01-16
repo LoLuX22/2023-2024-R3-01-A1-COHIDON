@@ -1,1 +1,1 @@
-<h1><?=$AddType?></h1>
+<h1>Add type</h1>

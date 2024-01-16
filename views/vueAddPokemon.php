@@ -1,1 +1,1 @@
-<h1><?= $AddPokemon ?><h1>
+<h1>Add pokemon<h1>
