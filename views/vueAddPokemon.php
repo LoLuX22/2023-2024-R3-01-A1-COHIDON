@@ -1,0 +1,1 @@
+<h1><?= $AddPokemon ?><h1>
